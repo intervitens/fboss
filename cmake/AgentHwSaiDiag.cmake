@@ -8,6 +8,9 @@ add_library(diag_shell
   fboss/agent/hw/sai/diag/oss/DiagShell.cpp
 )
 
+# Find Python 3
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+
 target_link_libraries(diag_shell
   sai_repl
   python_repl
